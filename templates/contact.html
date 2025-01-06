@@ -1,0 +1,174 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from up2client.com/envato/biogi/freelancer/main-file/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 May 2024 18:29:13 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Freelancer</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.svg">
+    <link rel="stylesheet" href="{% static 'assets/css/swap.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/fancybox.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/aos.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/slick.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/media_query.css' %}">
+</head>
+<body>
+    <div class="site_contain">
+        <!-- ====================================== Cusrsor ===================================== -->
+        <div class="cursor"></div>
+        <!-- ====================================== Cursor End ===================================== -->
+        <!-- ====================================== Preloader ===================================== -->
+        <div class="page-loader">
+            <div class="loader"></div>
+            <div class="shadow"></div>
+        </div>
+        <!-- ====================================== Preloader End ===================================== -->
+        <!-- ====================================== Main Menu ===================================== -->
+        {% include "navbar.html" %}
+        <!-- ====================================== Main Menu End ===================================== -->
+        <!-- ====================================== Conatct Section One ===================================== -->
+        <section class="section-main contact-section-main overflow-hidden" id="section-main-id">
+            <div class="container">
+                <p class="main-text my-services" data-aos="fade-down">CONTACT ME</p>
+                <h1 class="ui-ux" data-aos="fade-down">Let's make something awesome together!</h1>
+            </div>
+        </section>
+        <!-- ====================================== Conatct Section One End===================================== -->
+        <!-- ====================================== Conatct Section two ===================================== -->
+        <section class="section-two-my-services">
+            <div class="container" id="form-conatiner">
+                <div class="row" id="form">
+                    <div class="col-xxl-8 col-xl-8 col-lg-8 ">
+                        
+                        <form class="form-main" method="post">
+                            {% csrf_token %}
+                            <div class="form-main-sub">
+                                <div class="input-main-form">
+                                    <p class="name">Name:</p>
+                                    <input type="text" name="name" placeholder="Your name" autocomplete="on">
+                                </div>
+                                <div class="input-main-form">
+                                    <p class="name">Email:</p>
+                                    <input type="email" name="email" placeholder="Your email" autocomplete="on">
+                                </div>
+                            </div>
+                            <div class="form-main-sub">
+                                <div class="input-main-form">
+                                    <p class="name">Phone (optional):</p>
+                                    <input type="text" name="phone" placeholder="Your phone" autocomplete="on">
+                                </div>
+                                <div class="input-main-form">
+                                    <p class="name">Subject:</p>
+                                    <input type="text" name="subject" placeholder="Your subject" autocomplete="on">
+                                </div>
+                            </div>
+                            <div class="input-main-form">
+                                <p class="name">Message:</p>
+                                <textarea name="message" placeholder="Type your message..."></textarea>
+                            </div>
+                            
+                            <div class="form-submit-btn-main">
+                                <button class="explore-btn hover-slide-right form-submit-btn" type="submit">
+                                    <span id="toggle">SUBMIT
+                                        <svg class="expo-arrow2" xmlns="http://www.w3.org/2000/svg" width="32"
+                                            height="32" viewBox="0 0 32 32" fill="none">
+                                            <g>
+                                                <path d="M6.66669 16H25.3334" stroke="#FFDB59" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <path d="M20 21.3333L25.3333 16" stroke="#FFDB59" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <path d="M20 10.6666L25.3333 16" stroke="#FFDB59" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </g>
+                                        </svg>
+                                    </span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-xxl-4 col-xl-4 col-lg-4 overflow-hidden">
+                        <div class="get-touch-box-main">
+                            <h2>Get In Touch</h2>
+                            <p class="well">When do they work well, and when do they on us and finally, when do we
+                                actually need how can we avoid them.</p>
+                            <div class="contact-footer contact-footer2">
+                                <img src="{% static 'assets/images/phone_svg.svg' %}" alt="phone_svg">
+                                <a href="tel:+923436000542">+92 343 6000542</a>
+                            </div>
+                            <div class="contact-footer contact-footer2">
+                                <img src="{% static 'assets/images/email_svg.svg' %}" alt="email_svg">
+                                <a href="mailto:wasimranjhaa@gmail.com">wasimranjhaa@gmail.com</a>
+                            </div>
+                            <div class="contact-footer contact-footer2">
+                                <img src="{% static 'assets/images/location_svg.svg' %}" alt="location_svg">
+                                <p>Mirpur AJK Pakistan.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ====================================== Conatct Section Two End===================================== -->
+        <div class="header_full_sec about_header_full_sec">
+            <div class="position-relative">
+                <img class="client-bounce-img client-bounce-img1" src="{% static 'assets/images/client-bounce-img1.jpg' %}"
+                    alt="client-bounce-img1">
+                <img class="client-bounce-img client-bounce-img2" src="{% static 'assets/images/client-bounce-img2.jpg' %}"
+                    alt="client-bounce-img2">
+                <img class="client-bounce-img client-bounce-img3" src="{% static 'assets/images/client-bounce-img3.jpg' %}"
+                    alt="client-bounce-img3">
+                <img class="client-bounce-img client-bounce-img4" src="{% static 'assets/images/client-bounce-img4.jpg' %}"
+                    alt="client-bounce-img4">
+                    <div class="logos">
+                        <div class="logos-slide">
+                            <div class="ticker__item">
+                                <a href="mailto:wasimranjhaa@gmail.com">wasimranjhaa@gmail.com</a>
+                            </div>
+                            <div class="ticker__item ticker__item_dark">
+                                <a href="tel:(+92)3436000542">(+92) 343 6000 542</a>
+                            </div>
+                            <div class="ticker__item">
+                                <a href="mailto:wasimranjhaa@gmail.com">wasimranjhaa@gmail.com</a>
+                            </div>
+                            <div class="ticker__item ticker__item_dark">
+                                <a href="tel:(+92)3436000542">(+92) 343 6000 542</a>
+                            </div>
+                            <div class="ticker__item">
+                                <a href="mailto:wasimranjhaa@gmail.com">wasimranjhaa@gmail.com</a>
+                            </div>
+                            <div class="ticker__item ticker__item_dark">
+                                <a href="tel:(+92)3436000542">(+92) 343 6000 542</a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <!-- ====================================== Footer ===================================== -->
+        {% include "footer.html" %}
+        <!-- ====================================== Footer End ===================================== -->
+        <!-- ====================================== Progress Scroll Bottom To Top ===================================== -->
+        <div class="progress-wrap cursor-pointer">
+            <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+            </svg>
+        </div>
+        <!-- ====================================== Progress Scroll Bottom To Top End ===================================== -->
+    </div>
+    <script src="{% static 'assets/javascript/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/javascript/fancybox.min.js' %}"></script>
+    <script src="{% static 'assets/javascript/gsap.js' %}"></script>
+    <script src="{% static 'assets/javascript/magnific-popup.min.js' %}"></script>
+    <script src="{% static 'assets/javascript/aos.js' %}"></script>
+    <script src="{% static 'assets/javascript/slick.min.js' %}"></script>
+    <script src="{% static 'assets/javascript/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/javascript/script.js' %}"></script>
+
+</body>
+
+<!-- Mirrored from up2client.com/envato/biogi/freelancer/main-file/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 May 2024 18:29:13 GMT -->
+</html>

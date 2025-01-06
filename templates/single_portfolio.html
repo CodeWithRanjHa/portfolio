@@ -1,0 +1,219 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from up2client.com/envato/biogi/freelancer/main-file/{% url "portfolio" %} by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 May 2024 18:28:19 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Portfolio - Freelancer</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.svg">
+    <link rel="stylesheet" href="{% static 'assets/css/swap.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/fancybox.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/aos.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/slick.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/media_query.css' %}">
+</head>
+<body>
+    <div class="site_contain">
+        <!-- ====================================== Cusrsor ===================================== -->
+        <div class="cursor"></div>
+        <!-- ====================================== Cursor End ===================================== -->
+        <!-- ====================================== Preloader ===================================== -->
+        <div class="page-loader">
+            <div class="loader"></div>
+            <div class="shadow"></div>
+        </div>
+        <!-- ====================================== Preloader End ===================================== -->
+        <!-- ====================================== Main Menu ===================================== -->
+
+        {% include "navbar.html" %}
+
+        <!-- ====================================== Main Menu End ===================================== -->
+        <!-- ====================================== single portfolio Section One ===================================== -->
+        <section class="section-main overflow-hidden" id="section-main-id">
+            <div class="container">
+                <p class="main-text my-services" data-aos="fade-down">MY WORK</p>
+                <h1 class="ui-ux" data-aos="fade-down">{{project.title}}</h1>
+                <p class="Freelance freelance-text2" data-aos="fade-down">My development process is rooted in collaboration and iterative feedback. I begin by understanding project requirements and target audiences, followed by wireframing and prototyping to visualize the application’s layout. Utilizing modern technologies and frameworks, I ensure efficient coding practices and maintain high standards of quality throughout the development lifecycle.</p>
+            </div>
+        </section>
+        <!-- ================== Single Portfolio Section One End ===============================-->
+        <!-- ================== Single Portfolio Section Two ===============================-->
+        <section class="section-two-my-services">
+            <div class="container">
+                <div class="single-services-img-main bike" data-aos="fade-up">
+                    <img class="single-services-main-img move-img" src="{% static 'assets/images/single-services-main-img.jpg' %}"
+                        alt="single-services-main-img">
+                </div>
+                <div class="row overflow-hidden">
+                    <div class="col-xxl-8 col-xl-8 col-lg-8 ">
+                        <h2 class="build" data-aos="fade-up">Delivering Scalable and User-Centric Web Solutions</h2>
+                        <p class="nunc-text mattis" data-aos="fade-up">
+                            {{ project.description_part1 }}
+                        </p>
+                        <p class="nunc-text" data-aos="fade-up">
+                            {{ project.description_part2 }}
+                        </p>
+                        
+                        <h2 class="sed" data-aos="fade-up">Overview</h2>
+                        <p class="nunc-text" data-aos="fade-up">{{project.overview}}
+                        </p>
+                        <ul class="single-service-list" data-aos="fade-up">
+                            <li>Custom web applications tailored to meet your business needs.</li>
+                            <li>Responsive designs that ensure a seamless user experience across devices.</li>
+                            <li>Integration of cutting-edge technologies for enhanced functionality.</li>
+                            <li>Robust backend solutions to support your frontend applications.</li>
+                            <li>Ongoing maintenance and support for continuous improvement.</li>
+                            <li>SEO-optimized websites to improve visibility and drive traffic.</li>
+                        </ul>
+                        <div class="overview-imgs-main" style="width: 900px;height: 500px;">
+                            <img src="{% static 'assets/images/port.jpg' %}" alt="single-portfolio-over-img1" style="width: 500px;height: 400px;">
+                            <img src="{% static 'assets/images/port1.jpg' %}" alt="single-portfolio-over-img2" style="width: 500px;height: 400px;">
+                        </div>
+                        <h2 class="sed" id="sed" data-aos="fade-up">My Process for Creative Features</h2>
+                        <div class="features-percentage-main counter">
+                            <h2 class="features-percent count" data-count="120">120%</h2>
+                            <p class="fetures-month">Months Project Duration</p>
+                        </div>
+                        <div class="features-percentage-main counter features-percentage-main2">
+                            <h2 class="features-percent count" data-count="45">45%</h2>
+                            <p class="fetures-month">Average daily signups</p>
+                        </div>
+                        <div class="features-percentage-main counter features-percentage-main2">
+                            <h2 class="features-percent count" data-count="300">300%</h2>
+                            <p class="fetures-month">Growth After Work</p>
+                        </div>
+                        
+                        
+                    </div>
+                    <div class="col-xxl-4 col-xl-4 col-lg-4 overflow-hidden">
+                        <div class="other-services-main other-services-main-spacer" data-aos="fade-left">
+                            <p class="other-services">Project Details</p>
+                            <div class="project-details-main pt-0">
+                                <p class="project-details-sub-text">Category:</p>
+                                <p class="development">{{project.category}}</p>
+                            </div>
+                            <div class="project-details-main">
+                                <p class="project-details-sub-text">Software:</p>
+                                <p class="development">
+                                    {% for software in project.software.all %}
+                                        {{ software.name }}{% if not forloop.last %}, {% endif %}
+                                    {% endfor %}
+                                </p>
+
+                            </div>
+                            <div class="project-details-main">
+                                <p class="project-details-sub-text">Service:</p>
+                                <p class="development">Development</p>
+                            </div>
+                            
+                            <div class="project-details-main border-0">
+                                <p class="project-details-sub-text">Date:</p>
+                                <p class="development">{{ project.date|date:"F d, Y " }}</p>
+                            </div>
+                        </div>
+                        <div class="other-services-main other-services-main2" data-aos="fade-left">
+                            <div class="call-svg-main">
+                                <a href="tel:+(92)3436000542">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_233_43)">
+                                            <path
+                                                d="M10 8H18L22 18L17 21C19.1419 25.3431 22.6569 28.8581 27 31L30 26L40 30V38C40 39.0609 39.5786 40.0783 38.8284 40.8284C38.0783 41.5786 37.0609 42 36 42C28.1985 41.5259 20.8403 38.213 15.3137 32.6863C9.78701 27.1597 6.4741 19.8015 6 12C6 10.9391 6.42143 9.92172 7.17157 9.17157C7.92172 8.42143 8.93913 8 10 8Z"
+                                                stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M30 14C31.0609 14 32.0783 14.4214 32.8284 15.1716C33.5786 15.9217 34 16.9391 34 18"
+                                                stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M30 6C33.1826 6 36.2348 7.26428 38.4853 9.51472C40.7357 11.7652 42 14.8174 42 18"
+                                                stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_233_43">
+                                                <rect width="48" height="48" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="call-anytime-box-main" data-aos="fade-left">
+                                <p class="other-services service_provider">Looking for Design & Development Service
+                                    Provider?
+                                </p>
+                                <p class="call-anytime">CALL ANYTIME</p>
+                                <div class="call-anytime-btn">
+                                    <a href="tel:+(92)3436000542">+(92) 343 6000 542</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ================== Single Portfolio Section Two End ===============================-->
+        <!-- ================== Single Portfolio Section Three ===============================-->
+        
+        <!-- ================== Single Portfolio Section Three End ===============================-->
+        <div class="header_full_sec about_header_full_sec">
+            <div class="position-relative">
+                <img class="client-bounce-img client-bounce-img1" src="{% static 'assets/images/client-bounce-img1.jpg' %}"
+                    alt="client-bounce-img1">
+                <img class="client-bounce-img client-bounce-img2" src="{% static 'assets/images/client-bounce-img2.jpg' %}"
+                    alt="client-bounce-img2">
+                <img class="client-bounce-img client-bounce-img3" src="{% static 'assets/images/client-bounce-img3.jpg' %}"
+                    alt="client-bounce-img3">
+                <img class="client-bounce-img client-bounce-img4" src="{% static 'assets/images/client-bounce-img4.jpg' %}"
+                    alt="client-bounce-img4">
+                <div class="logos">
+                    <div class="logos-slide">
+                        <div class="ticker__item">
+                            <a href="mailto:wasimranjhaa@gmail.com">wasimranjhaa@gmail.com</a>
+                        </div>
+                        <div class="ticker__item ticker__item_dark">
+                            <a href="tel:(+92)3436000542">(+92) 343 6000 542</a>
+                        </div>
+                        <div class="ticker__item">
+                            <a href="mailto:wasimranjhaa@gmail.com">wasimranjhaa@gmail.com</a>
+                        </div>
+                        <div class="ticker__item ticker__item_dark">
+                            <a href="tel:(+92)3436000542">(+92) 343 6000 542</a>
+                        </div>
+                        <div class="ticker__item">
+                            <a href="mailto:wasimranjhaa@gmail.com">wasimranjhaa@gmail.com</a>
+                        </div>
+                        <div class="ticker__item ticker__item_dark">
+                            <a href="tel:(+92)3436000542">(+92) 343 6000 542</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ================== Footer ===============================-->
+        {% include "footer.html" %}
+        <!-- ================== Footer ===============================-->
+        <!-- ====================================== Progress Scroll Bottom To Top ===================================== -->
+        <div class="progress-wrap cursor-pointer">
+            <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+            </svg>
+        </div>
+        <!-- ====================================== Progress Scroll Bottom To Top End ===================================== -->
+    </div>
+    <script src="{% static 'assets/javascript/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/javascript/fancybox.min.js' %}"></script>
+    <script src="{% static 'assets/javascript/gsap.js' %}"></script>
+    <script src="{% static 'assets/javascript/magnific-popup.min.js' %}"></script>
+    <script src="{% static 'assets/javascript/aos.js' %}"></script>
+    <script src="{% static 'assets/javascript/slick.min.js' %}"></script>
+    <script src="{% static 'assets/javascript/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/javascript/script.js' %}"></script>
+</body>
+
+</html>

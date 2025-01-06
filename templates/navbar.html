@@ -1,0 +1,158 @@
+{% load static %}
+
+<header id="top-navbar" class="top-navbar">
+    <div class="container">
+        <div class="top-navbar_full">
+            <div class="back-btn">
+                <a href="{% url "home" %}">
+                    <img class="wn-logo" src="{% static 'assets/images/WR.svg' %}" alt="logo">
+                    <!-- <img src="{% static 'assets/images/name logo.png' %}" alt="" srcset="" style="width: 103px; margin: -17px;"> -->
+                     <h5 class="wn-name">WasiM RanjHa</h5>
+                </a>
+            </div>
+            <div class="hell">
+                <ul class="top-navbar-title">
+                    <li class="menu-active"><a href="{% url "home" %}">Home</a></li>
+                    <li><a href="{% url "about" %}">About</a>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none">
+                        <g clip-path="url(#clip0_25_56)">
+                            <path d="M6 9L12 15L18 9" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </g>
+                    </svg></li>
+                    <li class="drop-svg dropdown dropdown-7">Services
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none">
+                            <g clip-path="url(#clip0_25_56)">
+                                <path d="M6 9L12 15L18 9" stroke="white" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </g>
+                        </svg>
+                        <ul class="dropdown_menu dropdown_menu--animated dropdown_menu-7">
+                            <li class="dropdown-submenu">
+                                <a class="sub-menu-arrow-main" href="{% url "services" %}">Services</a>
+                                
+                            </li>
+                            
+                        </ul>
+                    </li>
+                    <li class="drop-svg dropdown dropdown-7">Portfolio
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none">
+                            <g clip-path="url(#clip0_25_56)">
+                                <path d="M6 9L12 15L18 9" stroke="white" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </g>
+                        </svg>
+                        <ul class="dropdown_menu dropdown_menu--animated dropdown_menu-7">
+                            <li class="dropdown-submenu">
+                                <a class="sub-menu-arrow-main" href="{% url "portfolio" %}">Portfolio</a>
+                                
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="sub-menu-arrow-main" href="{% url "portfolio" %}">Portfolio</a>
+                                
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="drop-svg dropdown dropdown-7">Blog
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none">
+                            <g clip-path="url(#clip0_25_56)">
+                                <path d="M6 9L12 15L18 9" stroke="white" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </g>
+                        </svg>
+                        <ul class="dropdown_menu dropdown_menu--animated dropdown_menu-7">
+                            <li class="dropdown-submenu">
+                                <a class="sub-menu-arrow-main" href="{% url "blog" %}">Blog</a>
+                                
+                            </li>
+                            
+                        </ul>
+                    </li>
+                    <li><a href="{% url "contact-us" %}">Contact</a></li>
+                </ul>
+                <a href="{% static 'assets/pdf/Ranjha DEV.pdf' %}">
+                    <div class="cv-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none">
+                            <g clip-path="url(#clip0_25_74)">
+                                <path d="M12 3V15" stroke="#0F141C" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M16 11L12 15L8 11" stroke="#0F141C" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M3 12C3 14.3869 3.94821 16.6761 5.63604 18.364C7.32387 20.0518 9.61305 21 12 21C14.3869 21 16.6761 20.0518 18.364 18.364C20.0518 16.6761 21 14.3869 21 12"
+                                    stroke="#0F141C" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </g>
+                        </svg>
+                    </div>
+                </a>
+                <div class="outer-menu">
+                    <input class="checkbox-toggle" type="checkbox" name="checkbox">
+                    <div class="hamburger">
+                        <div></div>
+                    </div>
+                    <!-- ====================================== Side Menu ===================================== -->
+                    <div class="menu">
+                        <div>
+                            <nav>
+                                <div class="container">
+                                    <div class="row sidemenu-main">
+                                        <div class="col-lg-2">
+                                            <div class="menu-text">
+                                                <div class="side-menu-text">
+                                                    <p>MENU</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-7 side-menu-scroll">
+                                            <div class="heading2"><a href="{% url "home" %}">Home</a></div>
+                                            <div class="heading2"><a href="{% url "about" %}">About</a></div>
+                                            <div class="accordion">
+                                                <a href="{% url "portfolio" %}"><div class="heading2 heading cursor-arrow">Portfolio</div></a>
+                                                <div class="contents">
+                                                    
+                                                </div>
+                                                
+                                                <a href="{% url "services" %}"><div class="heading2 heading">Services</div></a>
+                                                <div class="contents">
+                                                    
+                                                </div>
+                                                
+                                                <a href="{% url "blog" %}"><div class="heading2 heading cursor-arrow">Blog</div></a>
+                                                <div class="contents">
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="heading2"><a href="{% url "contact-us" %}">Contact</a></div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="cont-info">
+                                                <div class="item">
+                                                    <p class="sub-title-address">Address</p>
+                                                    <p class="geek-alto">Dadyal City.<br>Mirpur, PAKISTAN</p>
+                                                </div>
+                                                <div class="item">
+                                                    <p class="sub-title-address">Contact Us</p>
+                                                    <p><a href="mailto:wasimranjhaa@gmail.com">wasimranjhaa@gmail.com</a></p>
+                                                    <p class="underline">
+                                                        <a href="tel:+923436000542">+92 343 6000542</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                    <!-- ====================================== Side Menu End===================================== -->
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

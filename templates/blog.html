@@ -1,0 +1,130 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/images/favicon.svg' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/swap.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/fancybox.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/aos.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/slick.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/media_query.css' %}">
+    <style>
+        .coming-soon-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            background: linear-gradient(135deg, #1c1c1c, #333);
+            color: #fff;
+            text-align: center;
+        }
+
+        .coming-soon-container h1 {
+            font-size: 3rem;
+            font-family: 'Arial Black', sans-serif;
+            font-weight: bold;
+            animation: fadeIn 2s ease-in-out, bounce 1.5s infinite alternate, colorChange 3s infinite;
+        }
+
+        .coming-soon-container p {
+            margin-top: 1rem;
+            font-size: 1.2rem;
+            font-family: 'Courier New', Courier, monospace;
+            font-style: italic;
+            animation: textColorChange 4s infinite;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes colorChange {
+            0% {
+                color: #ff4b2b;
+            }
+            50% {
+                color: #ff416c;
+            }
+            100% {
+                color: #ff4b2b;
+            }
+        }
+
+        @keyframes textColorChange {
+            0% {
+                color: #cccccc;
+            }
+            50% {
+                color: #aaaaaa;
+            }
+            100% {
+                color: #cccccc;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="site_contain">
+        <!-- Cursor -->
+        <div class="cursor"></div>
+
+        <!-- Preloader -->
+        <div class="page-loader">
+            <div class="loader"></div>
+            <div class="shadow"></div>
+        </div>
+
+        <!-- Navbar -->
+        {% include "navbar.html" %}
+
+        <!-- Coming Soon Section -->
+        <div class="coming-soon-container">
+            <h1>Coming Soon</h1>
+            <p>We are working hard to launch something amazing. Stay tuned!</p>
+        </div>
+
+        <!-- Footer -->
+        {% include "footer.html" %}
+
+        <!-- Progress Scroll Bottom To Top -->
+        <div class="progress-wrap">
+            <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+            </svg>
+        </div>
+    </div>
+
+    <script src="{% static 'assets/javascript/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/javascript/fancybox.min.js' %}"></script>
+    <script src="{% static 'assets/javascript/gsap.js' %}"></script>
+    <script src="{% static 'assets/javascript/magnific-popup.min.js' %}"></script>
+    <script src="{% static 'assets/javascript/aos.js' %}"></script>
+    <script src="{% static 'assets/javascript/slick.min.js' %}"></script>
+    <script src="{% static 'assets/javascript/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/javascript/script.js' %}"></script>
+</body>
+
+</html>

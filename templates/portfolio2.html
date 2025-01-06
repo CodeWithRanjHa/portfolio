@@ -1,0 +1,325 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from up2client.com/envato/biogi/freelancer/main-file/{% url "portfolio" %} by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 May 2024 18:28:03 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Freelancer</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.svg">
+    <link rel="stylesheet" href="{% static 'assets/css/swap.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/fancybox.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/aos.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/slick.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/media_query.css' %}">
+    <style>
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .col-xxl-4, .col-xl-4, .col-lg-4, .col-md-6 {
+            flex: 0 0 33.3333%; /* 3 columns per row */
+            max-width: 33.3333%;
+        }
+        
+        .portfolio-hover-box-main {
+            margin-bottom: 20px; /* Adjust spacing between rows */
+        }
+        
+        .projects_img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="site_contain">
+        <!-- ====================================== Cusrsor ===================================== -->
+        <div class="cursor"></div>
+        <!-- ====================================== Cursor End ===================================== -->
+        <!-- ====================================== Preloader ===================================== -->
+        <div class="page-loader">
+            <div class="loader"></div>
+            <div class="shadow"></div>
+        </div>
+        <!-- ====================================== Preloader End ===================================== -->
+        <!-- ====================================== Main Menu ===================================== -->
+        {% include "navbar.html" %}
+        <!-- ====================================== Main Menu End ===================================== -->
+        <!-- ====================================== Portfolio Section One ===================================== -->
+        <section class="single-blog2-section-main overflow-hidden" id="main">
+            <div class="container">
+                <p class="main-text" data-aos="fade-down">My Portfolio</p>
+                <h1 class="JessicaBiogi blog2-main-text" data-aos="fade-down">Selected Work</h1>
+                <nav aria-label="breadcrumb" id="breadcrumb" data-aos="fade-up">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{% url "home" %}">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page"><a href="{% url "portfolio" %}">Portfolio</a>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+        <!-- ====================================== Portfolio Section One End ===================================== -->
+        <!-- ================== Portfolio Section Two ===============================-->
+        <section class="section-five section-five-portfolio overflow-hidden">
+            <div class="container">
+                <p class="our-services discover-our-cases" data-aos="fade-up">DISCOVER OUR CASES</p>
+                <div class="tab-header">
+                    <div>
+                        <h2 class="our-solution latest_project" data-aos="fade-down">Latest Projects.</h2>
+                    </div>
+                    <div class="tab-bar" data-aos="fade-up">
+                        <button class="tab-button active" data-tab="tab1"><span>{{total_projects}}</span>ALL</button>
+                        <button class="tab-button" data-tab="tab2"><span>{{full_stack_count}}</span>FULL STACK DEVELOPMENT</button>
+                        <button class="tab-button" data-tab="tab3"><span>{{backend_count}}</span>BACKEND</button>
+                        <button class="tab-button" data-tab="tab4"><span>{{frontend_count}}</span>FRONTEND</button>
+                        <button class="tab-button" data-tab="tab5"><span>{{automation_count}}</span>AUTOMATION</button>
+                        <button class="tab-button" data-tab="tab6"><span>{{web_scraping_count}}</span>WEB SCRAPING</button>
+                        <button class="tab-button" data-tab="tab7"><span>{{scripting_count}}</span>SCRIPTING</button>
+                        {% comment %} <button class="tab-button" data-tab="tab8"><span>2</span>OTHER</button> {% endcomment %}
+                    </div>
+                </div>
+                <div class="tab-content">
+                    <div id="tab1" class="tab-pane active" data-aos="zoom-in">
+                        <div class="row">
+                            {% for project in projects %}
+                            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 portfolio-hover-box-main">
+                                <div class="portfolio-hover-box">
+                                    <a href="{% url 'project_details' pk=project.id %}">
+                                        <img class="projects_img" src="{{project.image.url}}"
+                                            alt="single-services-project-img1">
+                                        <div class="figcaption">
+                                            <h3>{{project.title}}</h3>
+                                            <h4>CONTENT</h4>
+                                            {% comment %} <a href="{% url 'edit_project' pk=project.id %}">Edit Project</a> {% endcomment %}
+
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <div id="tab2" class="tab-pane tab-pane2 ">
+                        <div class="row">
+                            {% for project in full_Stack %}
+                            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 portfolio-hover-box-main">
+                                <div class="portfolio-hover-box">
+                                    <a href="{% url 'project_details' pk=project.id %}">
+                                        <img class="projects_img" src="{{project.image.url}}"
+                                            alt="single-services-project-img1">
+                                        <div class="figcaption">
+                                            <h3>{{project.title}}</h3>
+                                            <h4>CONTENT</h4>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            {% endfor %}
+                            
+                        </div>
+                    </div>
+                    <div id="tab3" class="tab-pane tab-pane2">
+                        <div class="row">
+                            {% for project in backend %}
+                            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 portfolio-hover-box-main">
+                                <div class="portfolio-hover-box">
+                                    <a href="{% url 'project_details' pk=project.id %}">
+                                        <img class="projects_img" src="{{project.image.url}}"
+                                            alt="single-services-project-img1">
+                                        <div class="figcaption">
+                                            <h3>{{project.title}}</h3>
+                                            <h4>CONTENT</h4>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div id="tab4" class="tab-pane tab-pane2">
+                        <div class="row">
+                            {% for project in frontend %}
+                            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 portfolio-hover-box-main">
+                                <div class="portfolio-hover-box">
+                                    <a href="{% url 'project_details' pk=project.id %}">
+                                        <img class="projects_img" src="{{project.image.url}}"
+                                            alt="single-services-project-img1">
+                                        <div class="figcaption">
+                                            <h3>{{project.title}}</h3>
+                                            <h4>CONTENT</h4>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div id="tab5" class="tab-pane tab-pane2">
+                        <div class="row">
+                            {% for project in automation %}
+                            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 portfolio-hover-box-main">
+                                <div class="portfolio-hover-box">
+                                    <a href="{% url 'project_details' pk=project.id %}">
+                                        <img class="projects_img" src="{{project.image.url}}"
+                                            alt="single-services-project-img1">
+                                        <div class="figcaption">
+                                            <h3>{{project.title}}</h3>
+                                            <h4>CONTENT</h4>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div id="tab6" class="tab-pane tab-pane2">
+                        <div class="row">
+                            {% for project in web_scraping %}
+                            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 portfolio-hover-box-main">
+                                <div class="portfolio-hover-box">
+                                    <a href="{% url 'project_details' pk=project.id %}">
+                                        <img class="projects_img" src="{{project.image.url}}"
+                                            alt="single-services-project-img1">
+                                        <div class="figcaption">
+                                            <h3>{{project.title}}</h3>
+                                            <h4>CONTENT</h4>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div id="tab7" class="tab-pane tab-pane2">
+                        <div class="row">
+                            {% for project in scripting %}
+                            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 portfolio-hover-box-main">
+                                <div class="portfolio-hover-box">
+                                    <a href="{% url 'project_details' pk=project.id %}">
+                                        <img class="projects_img" src="{{project.image.url}}"
+                                            alt="single-services-project-img1">
+                                        <div class="figcaption">
+                                            <h3>{{project.title}}</h3>
+                                            <h4>CONTENT</h4>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            {% endfor %}
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <!-- ================== Portfolio Section Two End ===============================-->
+        <!-- ====================================== Brands Marquee Section ===================================== -->
+        <div class="Marquee-main about-Marquee-main overflow-hidden">
+            <h3 data-aos="fade-down">Trusted by World Leading Brands</h3>
+            <div class="logos logos2">
+                <div class="logos-slide">
+                    <div class="marquee__content">
+                        <div class="marquee-img-main">
+                            <img class="brand-logos" src="{% static 'assets/images/brand-logo1.png' %}" alt="brand-logo1">
+                        </div>
+                        <div class="marquee-img-main">
+                            <img class="brand-logos" src="{% static 'assets/images/brand-logo2.png' %}" alt="brand-logo2">
+                        </div>
+                        <div class="marquee-img-main">
+                            <img class="brand-logos" src="{% static 'assets/images/brand-logo3.png' %}" alt="brand-logo3">
+                        </div>
+                        <div class="marquee-img-main">
+                            <img class="brand-logos" src="{% static 'assets/images/brand-logo4.png' %}" alt="brand-logo4">
+                        </div>
+                        <div class="marquee-img-main">
+                            <img class="brand-logos" src="{% static 'assets/images/brand-logo5.png' %}" alt="brand-logo5">
+                        </div>
+                        <div class="marquee-img-main">
+                            <img class="brand-logos" src="{% static 'assets/images/brand-logo6.png' %}" alt="brand-logo6">
+                        </div>
+                        <div class="marquee-img-main">
+                            <img class="brand-logos" src="{% static 'assets/images/brand-logo7.png' %}" alt="brand-logo7">
+                        </div>
+                        <div class="marquee-img-main">
+                            <img class="brand-logos" src="{% static 'assets/images/brand-logo8.png' %}" alt="brand-logo8">
+                        </div>
+                        <div class="marquee-img-main">
+                            <img class="brand-logos" src="{% static 'assets/images/brand-logo7.png' %}" alt="brand-logo9">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ====================================== Brands Marquee Section End===================================== -->
+        <div class="header_full_sec about_header_full_sec">
+            <div class="position-relative">
+                <img class="client-bounce-img client-bounce-img1" src="{% static 'assets/images/client-bounce-img1.jpg' %}"
+                    alt="client-bounce-img1">
+                <img class="client-bounce-img client-bounce-img2" src="{% static 'assets/images/client-bounce-img2.jpg' %}"
+                    alt="client-bounce-img2">
+                <img class="client-bounce-img client-bounce-img3" src="{% static 'assets/images/client-bounce-img3.jpg' %}"
+                    alt="client-bounce-img3">
+                <img class="client-bounce-img client-bounce-img4" src="{% static 'assets/images/client-bounce-img4.jpg' %}"
+                    alt="client-bounce-img4">
+                <div class="logos">
+                    <div class="logos-slide">
+                        <div class="ticker__item">
+                            <a href="mailto:wasimranjhaa@gmail.com">wasimranjhaa@gmail.com</a>
+                        </div>
+                        <div class="ticker__item ticker__item_dark">
+                            <a href="tel:(+92)3436000542">(+92) 343 6000 542</a>
+                        </div>
+                        <div class="ticker__item">
+                            <a href="mailto:wasimranjhaa@gmail.com">wasimranjhaa@gmail.com</a>
+                        </div>
+                        <div class="ticker__item ticker__item_dark">
+                            <a href="tel:(+92)3436000542">(+92) 343 6000 542</a>
+                        </div>
+                        <div class="ticker__item">
+                            <a href="mailto:wasimranjhaa@gmail.com">wasimranjhaa@gmail.com</a>
+                        </div>
+                        <div class="ticker__item ticker__item_dark">
+                            <a href="tel:(+92)3436000542">(+92) 343 6000 542</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ====================================== Footer ===================================== -->
+        {% include "footer.html" %}
+        <!-- ====================================== Footer End ===================================== -->
+        <!-- ====================================== Progress Scroll Bottom To Top ===================================== -->
+        <div class="progress-wrap cursor-pointer">
+            <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+            </svg>
+        </div>
+        <!-- ====================================== Progress Scroll Bottom To Top End ===================================== -->
+    </div>
+    <script src="{% static 'assets/javascript/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/javascript/fancybox.min.js' %}"></script>
+    <script src="{% static 'assets/javascript/gsap.js' %}"></script>
+    <script src="{% static 'assets/javascript/magnific-popup.min.js' %}"></script>
+    <script src="{% static 'assets/javascript/aos.js' %}"></script>
+    <script src="{% static 'assets/javascript/slick.min.js' %}"></script>
+    <script src="{% static 'assets/javascript/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/javascript/script.js' %}"></script>
+</body>
+
+<!-- Mirrored from up2client.com/envato/biogi/freelancer/main-file/{% url "portfolio" %} by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 May 2024 18:28:09 GMT -->
+</html>

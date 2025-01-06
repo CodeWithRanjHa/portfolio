@@ -1,0 +1,462 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from up2client.com/envato/biogi/freelancer/main-file/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 May 2024 18:27:16 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Freelancer</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.svg">
+    <link rel="stylesheet" href="{% static 'assets/css/swap.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/fancybox.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/aos.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/slick.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/media_query.css' %}">
+</head>
+<body>
+    <div class="site_contain">
+        <!-- ====================================== Cusrsor ===================================== -->
+        <div class="cursor"></div>
+        <!-- ====================================== Cursor End ===================================== -->
+        <!-- ====================================== Preloader ===================================== -->
+        <div class="page-loader">
+            <div class="loader"></div>
+            <div class="shadow"></div>
+        </div>
+        <!-- ====================================== Preloader End ===================================== -->
+        <!-- ====================================== Main Menu ===================================== -->
+        {% include "navbar.html" %}
+        <!-- ====================================== Main Menu End===================================== -->
+        <!-- ====================================== Main Menu End===================================== -->
+        <!-- ====================================== About Section One ===================================== -->
+        <section class="section-main overflow-hidden">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xxl-6 col-xl-6 col-lg-6">
+                        <p class="main-text about-hello" data-aos="fade-down">Hello, I am <span>👋</span></p>
+                        <h1 class="JessicaBiogi" data-aos="fade-down">Wasim Ranjha</h1>
+                        <p class="Freelance about-freelance" data-aos="fade-down">A <span>Python Developer</span> and 
+                        Designer <span>based in Pakistan</span>. I specialize in creating efficient, scalable, and visually appealing web applications with a strong focus on user experience and modern design principles.</p>
+
+                        <div class="about-main-buttons">
+                            <a href="{% static 'assets/pdf/Ranjha DEV.pdf' %}"
+                                class="explore-btn hover-slide-right download-cv-about">
+                                <span>DOWNLOAD CV
+                                    <svg class="expo-arrow2" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                        viewBox="0 0 32 32" fill="none">
+                                        <g clip-path="url(#clip0_158_583)">
+                                            <path
+                                                d="M5.33337 22.6667V25.3333C5.33337 26.0406 5.61433 26.7189 6.11442 27.219C6.61452 27.7191 7.2928 28 8.00004 28H24C24.7073 28 25.3856 27.7191 25.8857 27.219C26.3858 26.7189 26.6667 26.0406 26.6667 25.3333V22.6667"
+                                                stroke="#FFDB59" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M9.33337 14.6667L16 21.3333L22.6667 14.6667" stroke="#FFDB59"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M16 5.33333V21.3333" stroke="#FFDB59" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_158_583">
+                                                <rect width="32" height="32" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                            </a>
+                            <p class="explore-me about-contact-btn" data-aos="fade-right">
+                                <a href="{% url "contact-us" %}">CONTACT ME
+                                    <svg class="expo-arrow" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                        viewBox="0 0 32 32" fill="none">
+                                        <g>
+                                            <path d="M6.66669 16H25.3334" stroke="#FFF" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M20 21.3333L25.3333 16" stroke="#FFF" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M20 10.6666L25.3333 16" stroke="#FFF" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </g>
+                                    </svg>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xxl-6 col-xl-6 col-lg-6 about-main-img-sec" id="main">
+                        <img class="about-flower-img" src="{% static 'assets/images/flower.png' %}" alt="flower">
+                        <img class="about-img-main" src="{% static 'assets/images/1.png' %}" alt="about-img-main"
+                            data-aos="fade-left" style="width: 350px;margin-bottom: -58px;position: relative;right: 59px;">
+                        <img class="about-arrow-main" id="arrow" src="{% static 'assets/images/about-arrow-main.png' %}"
+                            alt="about-arrow-main">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ====================================== About Section One End===================================== -->
+        <!-- ====================================== About Section Two ===================================== -->
+        <section class="about-section-two overflow-hidden">
+            <div class="container">
+                <div class="award-circle-main aos-init aos-animate" data-aos="zoom-in">
+                    <div class="award-circle">
+                        <img src="{% static 'assets/images/trophy.png' %}" alt="trophy">
+                    </div>
+                    <div>
+                        <h2 class="independent">Independent Of The Year</h2>
+                        <p class="annual">Annual Awards 2025</p>
+                    </div>
+                </div>
+                <h3 class="self-taught aos-init aos-animate" data-aos="fade-up">
+                    <span>I'm Wasim Ranjha</span> — a dedicated and passionate web developer <span>based in Pakistan</span>. With over 2 years of experience, I specialize in <span>Python, Django, web scraping, automation, API development, HTML, CSS, JavaScript,</span> and <span>React</span>, delivering high-quality and innovative solutions.
+                </h3>
+                
+                
+                <p class="odio aos-init aos-animate" data-aos="fade-up">
+                    As a dedicated Python developer, I have built a diverse portfolio by creating custom, high-performance web solutions for clients worldwide. My journey in tech began with a fascination for problem-solving and innovation, which led me to specialize in web development and automation. I’m passionate about bringing ideas to life through seamless code and design, making a meaningful impact with every project.
+                </p>
+                
+                
+            </div>
+        </section>
+        <!-- ====================================== About Section Two End ===================================== -->
+        <!-- ====================================== About Section Counter ===================================== -->
+        <section class="section-counter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-6 counter counter-col" data-aos="zoom-in">
+                        <h3 class="counter-digit count about-count" data-count="30">0</h3>
+                        <p class="counter-work">PROJECT COMPLETED</p>
+                    </div>
+                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-6 counter counter-col" data-aos="zoom-in">
+                        <h3 class="counter-digit count" data-count="05">0</h3>
+                        <p class="counter-work">AWARDS</p>
+                    </div>
+                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-6 counter counter-col2" data-aos="zoom-in">
+                        <h3 class="counter-digit count about-count" data-count="02">0</h3>
+                        <p class="counter-work">YEARS EXPERIENCE</p>
+                    </div>
+                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-6 counter" data-aos="zoom-in">
+                        <h3 class="counter-digit count about-count" data-count="30">0</h3>
+                        <p class="counter-work">HAPPY CLIENTS</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ====================================== About Section Counter End ===================================== -->
+        <!-- ====================================== About Section Three ===================================== -->
+        <section class="section-three overflow-hidden" id="explore-me">
+            <div class="container">
+                <div class="row services-section">
+                    <div class="col-xxl-4 col-xl-4 col-lg-4">
+                        <p class="our-services" data-aos="fade-up">PERSONAL INFO</p>
+                        <h2 class="our-solution" data-aos="fade-up">Get to Know Me</h2>
+                        <p class="uran odio" data-aos="fade-up">
+                                I’m a dedicated web developer with a focus on delivering reliable, efficient, and scalable solutions. I thrive on turning complex problems into seamless experiences and continuously strive to expand my skills and expertise.
+                        </p>
+
+                        <div class="services-circle-main">
+                            <div class="view-work-circle btn btn1" id="circle1" data-aos="zoom-in-right">
+                                <a href="{% url "portfolio" %}" class="a1">VIEW MY WORK</a>
+                            </div>
+                            <div class="contact-circle" data-aos="zoom-in-left">
+                                <div class="view-work-circle btn btn2">
+                                    <a href="{% url "contact-us" %}">CONTACT ME</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-7 col-xl-7 col-lg-7">
+                        <div id="faq-sec">
+                            <div class='nested-accordion' data-aos="fade-up">
+                                <h3 class="boder-top selected">Backend Development</h3>
+                                <div class='comment'>I focus on creating robust backend systems using Django, ensuring scalability and security.
+                                    <ul class="accor-list">
+                                        <li>API Development</li>
+                                        <li>Database Management</li>
+                                        <li>Authentication Systems</li>
+                                        <li>Server Deployment</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class='nested-accordion' data-aos="fade-up">
+                                <h3 class="boder-top ">Automation</h3>
+                                <div class='comment'>I develop custom automation scripts to streamline your workflows and enhance productivity.
+                                    <ul class="accor-list">
+                                        <li>Web Scraping</li>
+                                        <li>Data Extraction</li>
+                                        <li>Automated Testing</li>
+                                        <li>Process Automation</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class='nested-accordion' data-aos="fade-up">
+                                <h3 class="boder-top">Web Development</h3>
+                                <div class='comment'>I build high-performance web applications using the latest technologies, focusing on clean, maintainable code.
+                                    <ul class="accor-list">
+                                        <li>Backend Development</li>
+                                        <li>Frontend Integration</li>
+                                        <li>Responsive Design</li>
+                                        <li>Cross-Browser Compatibility</li>
+                                        <li>Performance Optimization</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class='nested-accordion' data-aos="fade-up">
+                                <h3 class="boder-top border-bottom-0 pb-0">Consulting</h3>
+                                <div class='comment'>I offer consulting services to help you design and implement the best technical solutions for your business.
+                                    <ul class="accor-list">
+                                        <li>Project Planning</li>
+                                        <li>Technical Audits</li>
+                                        <li>Performance Optimization</li>
+                                        <li>Scalability Solutions</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ====================================== About Section Three End ===================================== -->
+        <!-- ====================================== User Branding Marquee Section ===================================== -->
+        <div class="header_full_sec overflow-hidden">
+            <div class="logos">
+                <div class="logos-slide">
+                    <div class="ticker__item">User Interface</div>
+                    <div class="ticker__item ticker__item_dark">User Experience</div>
+                    <div class="ticker__item">Branding</div>
+                    <div class="ticker__item ticker__item_dark">Marketing</div>
+                    <div class="ticker__item">User Interface</div>
+                    <div class="ticker__item ticker__item_dark">User Experience</div>
+                    <div class="ticker__item">Branding</div>
+                    <div class="ticker__item ticker__item_dark">Marketing</div>
+                    <div class="ticker__item">User Interface</div>
+                    <div class="ticker__item ticker__item_dark">User Experience</div>
+                </div>
+            </div>
+        </div>
+        <!-- ====================================== User Branding Marquee Section ===================================== -->
+        <!-- ====================================== About Section Four ===================================== -->
+        
+        <!-- ====================================== About Section Four End ===================================== -->
+        <!-- ====================================== About Section Testimonials ===================================== -->
+        <section class="section-six overflow-hidden">
+            <div class="container">
+                <p class="our-services" data-aos="fade-up">TESTIMONIALS</p>
+                <h2 class="our-solution latest_project" data-aos="fade-down">What Our Clients Say.</h2>
+                <div class="testimonial_slider" data-aos="zoom-in-left">
+                    <div>
+                        <div class="great-work-svg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="30" viewBox="0 0 40 30"
+                                fill="none">
+                                <g>
+                                    <path
+                                        d="M11.9903 8.97047L11.9834 8.98364L11.977 8.997C10.9357 11.1534 10.3315 13.3985 10.1705 15.7265L10.1087 16.6197L10.9897 16.7794L16.4359 17.7668V29H1V20.6818C1 15.4562 2.21666 11.3738 4.55213 8.33851C6.85551 5.3666 9.89607 3.01035 13.7015 1.27904L15.1132 3.79798C14.0057 5.37106 12.9651 7.09582 11.9903 8.97047ZM34.5544 8.97047L34.5475 8.98364L34.5411 8.997C33.4998 11.1534 32.8956 13.3985 32.7346 15.7265L32.6728 16.6197L33.5538 16.7794L39 17.7668V29H23.5641V20.6818C23.5641 15.4561 24.7808 11.3737 27.1163 8.33843C29.4197 5.36656 32.4602 3.01033 36.2656 1.27904L37.6773 3.79798C36.5698 5.37106 35.5292 7.09583 34.5544 8.97047Z"
+                                        stroke="#FF7D61" stroke-width="2" />
+                                </g>
+                            </svg>
+                            <h3>Great Work!</h3>
+                        </div>
+                        <p class="posuere">Ultrices sed sed ut posuere at. Risus urna augue orci malesuada etiam diam
+                            enim. Parturient habitasse massa feugiat posuere odio leo vitae feugiat. Scelerisque cras
+                            viverra nunc ipsum et duis dui proin a. Urna rhoncus nullam odio sed vitae.
+                        </p>
+                        <svg class="slider-line" xmlns="http://www.w3.org/2000/svg" height="33" viewBox="0 0 630 33"
+                            fill="none">
+                            <path d="M630 1H100L70 31V1H0" stroke="#909090" />
+                        </svg>
+                        <div class="client_details">
+                            <img class="testimonial_client_img" src="{% static 'assets/images/testimonial_client_img1.jpg' %}"
+                                alt="testimonial_client_img1">
+                            <div>
+                                <h3 class="client-name">Olivia Segio</h3>
+                                <p class="studio">Oria Studio</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="great-work-svg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="30" viewBox="0 0 40 30"
+                                fill="none">
+                                <g>
+                                    <path
+                                        d="M11.9903 8.97047L11.9834 8.98364L11.977 8.997C10.9357 11.1534 10.3315 13.3985 10.1705 15.7265L10.1087 16.6197L10.9897 16.7794L16.4359 17.7668V29H1V20.6818C1 15.4562 2.21666 11.3738 4.55213 8.33851C6.85551 5.3666 9.89607 3.01035 13.7015 1.27904L15.1132 3.79798C14.0057 5.37106 12.9651 7.09582 11.9903 8.97047ZM34.5544 8.97047L34.5475 8.98364L34.5411 8.997C33.4998 11.1534 32.8956 13.3985 32.7346 15.7265L32.6728 16.6197L33.5538 16.7794L39 17.7668V29H23.5641V20.6818C23.5641 15.4561 24.7808 11.3737 27.1163 8.33843C29.4197 5.36656 32.4602 3.01033 36.2656 1.27904L37.6773 3.79798C36.5698 5.37106 35.5292 7.09583 34.5544 8.97047Z"
+                                        stroke="#FF7D61" stroke-width="2" />
+                                </g>
+                            </svg>
+                            <h3>Best Creative Agency!</h3>
+                        </div>
+                        <p class="posuere">Lectus quis sit diam aenean. Neque sed blandit sed at. Adipiscing eu aenean
+                            viverra nunc. Lacus ornare massa scelerisque feugiat pretium diam massa purus. Ultrices
+                            elementum mattis magna cras viverra nisl enim.
+                        </p>
+                        <svg class="slider-line" xmlns="http://www.w3.org/2000/svg" height="33" viewBox="0 0 630 33"
+                            fill="none">
+                            <path d="M630 1H100L70 31V1H0" stroke="#909090" />
+                        </svg>
+                        <div class="client_details">
+                            <img class="testimonial_client_img" src="{% static 'assets/images/testimonial_client_img2.jpg' %}"
+                                alt="testimonial_client_img1">
+                            <div>
+                                <h3 class="client-name">Alex Regan</h3>
+                                <p class="studio">Square Agency</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="great-work-svg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="30" viewBox="0 0 40 30"
+                                fill="none">
+                                <g>
+                                    <path
+                                        d="M11.9903 8.97047L11.9834 8.98364L11.977 8.997C10.9357 11.1534 10.3315 13.3985 10.1705 15.7265L10.1087 16.6197L10.9897 16.7794L16.4359 17.7668V29H1V20.6818C1 15.4562 2.21666 11.3738 4.55213 8.33851C6.85551 5.3666 9.89607 3.01035 13.7015 1.27904L15.1132 3.79798C14.0057 5.37106 12.9651 7.09582 11.9903 8.97047ZM34.5544 8.97047L34.5475 8.98364L34.5411 8.997C33.4998 11.1534 32.8956 13.3985 32.7346 15.7265L32.6728 16.6197L33.5538 16.7794L39 17.7668V29H23.5641V20.6818C23.5641 15.4561 24.7808 11.3737 27.1163 8.33843C29.4197 5.36656 32.4602 3.01033 36.2656 1.27904L37.6773 3.79798C36.5698 5.37106 35.5292 7.09583 34.5544 8.97047Z"
+                                        stroke="#FF7D61" stroke-width="2" />
+                                </g>
+                            </svg>
+                            <h3>Great Work!</h3>
+                        </div>
+                        <p class="posuere">Ultrices sed sed ut posuere at. Risus urna augue orci malesuada etiam diam
+                            enim. Parturient habitasse massa feugiat posuere odio leo vitae feugiat. Scelerisque cras
+                            viverra nunc ipsum et duis dui proin a. Urna rhoncus nullam odio sed vitae.
+                        </p>
+                        <svg class="slider-line" xmlns="http://www.w3.org/2000/svg" height="33" viewBox="0 0 630 33"
+                            fill="none">
+                            <path d="M630 1H100L70 31V1H0" stroke="#909090" />
+                        </svg>
+                        <div class="client_details">
+                            <img class="testimonial_client_img" src="{% static 'assets/images/testimonial_client_img3.jpg' %}"
+                                alt="testimonial_client_img3">
+                            <div>
+                                <h3 class="client-name">Andrew Lewis</h3>
+                                <p class="studio">Oria Studio</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="great-work-svg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="30" viewBox="0 0 40 30"
+                                fill="none">
+                                <g>
+                                    <path
+                                        d="M11.9903 8.97047L11.9834 8.98364L11.977 8.997C10.9357 11.1534 10.3315 13.3985 10.1705 15.7265L10.1087 16.6197L10.9897 16.7794L16.4359 17.7668V29H1V20.6818C1 15.4562 2.21666 11.3738 4.55213 8.33851C6.85551 5.3666 9.89607 3.01035 13.7015 1.27904L15.1132 3.79798C14.0057 5.37106 12.9651 7.09582 11.9903 8.97047ZM34.5544 8.97047L34.5475 8.98364L34.5411 8.997C33.4998 11.1534 32.8956 13.3985 32.7346 15.7265L32.6728 16.6197L33.5538 16.7794L39 17.7668V29H23.5641V20.6818C23.5641 15.4561 24.7808 11.3737 27.1163 8.33843C29.4197 5.36656 32.4602 3.01033 36.2656 1.27904L37.6773 3.79798C36.5698 5.37106 35.5292 7.09583 34.5544 8.97047Z"
+                                        stroke="#FF7D61" stroke-width="2" />
+                                </g>
+                            </svg>
+                            <h3>Best Creative Agency!</h3>
+                        </div>
+                        <p class="posuere">Lectus quis sit diam aenean. Neque sed blandit sed at. Adipiscing eu aenean
+                            viverra nunc. Lacus ornare massa scelerisque feugiat pretium diam massa purus. Ultrices
+                            elementum mattis magna cras viverra nisl enim.
+                        </p>
+                        <svg class="slider-line" xmlns="http://www.w3.org/2000/svg" height="33" viewBox="0 0 630 33"
+                            fill="none">
+                            <path d="M630 1H100L70 31V1H0" stroke="#909090" />
+                        </svg>
+                        <div class="client_details">
+                            <img class="testimonial_client_img" src="{% static 'assets/images/testimonial_client_img4.jpg' %}"
+                                alt="testimonial_client_img4">
+                            <div>
+                                <h3 class="client-name">Mark Daly</h3>
+                                <p class="studio">Square Agency</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ====================================== About Section Testimonials End ===================================== -->
+        <!-- ====================================== Brands Marquee Section ===================================== -->
+        <div class="Marquee-main about-Marquee-main overflow-hidden">
+            <h3 data-aos="fade-down">Trusted by World Leading Brands</h3>
+            <div class="logos logos2">
+                <div class="logos-slide">
+                    <div class="marquee__content">
+                        <div class="marquee-img-main">
+                            <img class="brand-logos" src="{% static 'assets/images/brand-logo1.png' %}" alt="brand-logo1">
+                        </div>
+                        <div class="marquee-img-main">
+                            <img class="brand-logos" src="{% static 'assets/images/brand-logo2.png' %}" alt="brand-logo2">
+                        </div>
+                        <div class="marquee-img-main">
+                            <img class="brand-logos" src="{% static 'assets/images/brand-logo3.png' %}" alt="brand-logo3">
+                        </div>
+                        <div class="marquee-img-main">
+                            <img class="brand-logos" src="{% static 'assets/images/brand-logo4.png' %}" alt="brand-logo4">
+                        </div>
+                        <div class="marquee-img-main">
+                            <img class="brand-logos" src="{% static 'assets/images/brand-logo5.png' %}" alt="brand-logo5">
+                        </div>
+                        <div class="marquee-img-main">
+                            <img class="brand-logos" src="{% static 'assets/images/brand-logo6.png' %}" alt="brand-logo6">
+                        </div>
+                        <div class="marquee-img-main">
+                            <img class="brand-logos" src="{% static 'assets/images/brand-logo7.png' %}" alt="brand-logo7">
+                        </div>
+                        <div class="marquee-img-main">
+                            <img class="brand-logos" src="{% static 'assets/images/brand-logo8.png' %}" alt="brand-logo8">
+                        </div>
+                        <div class="marquee-img-main">
+                            <img class="brand-logos" src="{% static 'assets/images/brand-logo7.png' %}" alt="brand-logo9">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ====================================== Brands Marquee Section End ===================================== -->
+        <div class="header_full_sec about_header_full_sec">
+            <div class="position-relative">
+                <img class="client-bounce-img client-bounce-img1" src="{% static 'assets/images/client-bounce-img1.jpg' %}"
+                    alt="client-bounce-img1">
+                <img class="client-bounce-img client-bounce-img2" src="{% static 'assets/images/client-bounce-img2.jpg' %}"
+                    alt="client-bounce-img2">
+                <img class="client-bounce-img client-bounce-img3" src="{% static 'assets/images/client-bounce-img3.jpg' %}"
+                    alt="client-bounce-img3">
+                <img class="client-bounce-img client-bounce-img4" src="{% static 'assets/images/client-bounce-img4.jpg' %}"
+                    alt="client-bounce-img4">
+                <div class="logos">
+                    <div class="logos-slide">
+                        <div class="ticker__item">
+                            <a href="mailto:wasimranjhaa@gmail.com">wasimranjhaa@gmail.com</a>
+                        </div>
+                        <div class="ticker__item ticker__item_dark">
+                            <a href="tel:(+92)3436000542">(+92) 343 6000 542</a>
+                        </div>
+                        <div class="ticker__item">
+                            <a href="mailto:wasimranjhaa@gmail.com">wasimranjhaa@gmail.com</a>
+                        </div>
+                        <div class="ticker__item ticker__item_dark">
+                            <a href="tel:(+92)3436000542">(+92) 343 6000 542</a>
+                        </div>
+                        <div class="ticker__item">
+                            <a href="mailto:wasimranjhaa@gmail.com">wasimranjhaa@gmail.com</a>
+                        </div>
+                        <div class="ticker__item ticker__item_dark">
+                            <a href="tel:(+92)3436000542">(+92) 343 6000 542</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ====================================== Footer ===================================== -->
+        {% include "footer.html" %}
+        <!-- ====================================== Footer End ===================================== -->
+        <!-- ====================================== Progress Scroll Bottom To Top ===================================== -->
+        <div class="progress-wrap cursor-pointer">
+            <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+            </svg>
+        </div>
+        <!-- ====================================== Progress Scroll Bottom To Top End ===================================== -->
+    </div>
+    <script src="{% static 'assets/javascript/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/javascript/fancybox.min.js' %}"></script>
+    <script src="{% static 'assets/javascript/gsap.js' %}"></script>
+    <script src="{% static 'assets/javascript/magnific-popup.min.js' %}"></script>
+    <script src="{% static 'assets/javascript/aos.js' %}"></script>
+    <script src="{% static 'assets/javascript/slick.min.js' %}"></script>
+    <script src="{% static 'assets/javascript/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/javascript/script.js' %}"></script>
+</body>
+
+<!-- Mirrored from up2client.com/envato/biogi/freelancer/main-file/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 May 2024 18:27:24 GMT -->
+</html>
